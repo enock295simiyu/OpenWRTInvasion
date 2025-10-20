@@ -52,10 +52,6 @@ else
     exit 1
 fi
 
-# Optional: upgrade pip
-echo -e "${GREEN}Upgrading pip...${NC}"
-python3 -m pip install --upgrade pip
-
 echo -e "${GREEN}Installation complete.${NC}"
 
 }
