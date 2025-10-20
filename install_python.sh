@@ -21,7 +21,7 @@ fi
 # Detect package manager
 if command -v apt >/dev/null 2>&1; then
     PKG_MANAGER="apt"
-    INSTALL_CMD="apt update && apt install -y python3 python3-pip"
+    INSTALL_CMD="apt update && apt install -y python3"
 elif command -v dnf >/dev/null 2>&1; then
     PKG_MANAGER="dnf"
     INSTALL_CMD="dnf install -y python3 python3-pip"
