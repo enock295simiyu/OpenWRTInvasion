@@ -24,13 +24,13 @@ if command -v apt >/dev/null 2>&1; then
     INSTALL_CMD="apt update && apt install -y python3"
 elif command -v dnf >/dev/null 2>&1; then
     PKG_MANAGER="dnf"
-    INSTALL_CMD="dnf install -y python3 python3-pip"
+    INSTALL_CMD="dnf install -y python"
 elif command -v yum >/dev/null 2>&1; then
     PKG_MANAGER="yum"
-    INSTALL_CMD=" yum install -y python3 python3-pip"
+    INSTALL_CMD=" yum install -y python"
 elif command -v pacman >/dev/null 2>&1; then
     PKG_MANAGER="pacman"
-    INSTALL_CMD=" pacman -Sy --noconfirm python python-pip"
+    INSTALL_CMD=" pacman -Sy --noconfirm python"
 elif command -v zypper >/dev/null 2>&1; then
     PKG_MANAGER="zypper"
     INSTALL_CMD=" zypper install -y python3 python3-pip"
