@@ -159,7 +159,7 @@ main () {
   cd openwrt_install
   install_dependancies
   setup_virtualenv venv requirements.txt
-
+  python nochwired_install.py
 }
 
 main
