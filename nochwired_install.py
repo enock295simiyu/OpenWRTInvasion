@@ -29,5 +29,8 @@ def install_openwrt(username='root',password='',router_address='',openwrt_downlo
     install_response=connector.exec_command("mtd -r write /tmp/openwrt.bin OS1")
     logger.info(install_response)
 
+    connector.disconnect()
+
 if __name__ == '__main__':
-    install_openwrt(username='root',password='',router_address='172.25.0.1',openwrt_download_link='https://openwrt.org/_detail/media/xiaomi/mi_router_4c.png?id=toh%3Axiaomi%3Axiaomi_mi_router_4c')
+    import remote_command_execution_vulnerability
+    install_openwrt(username='root',password='',router_address=remote_command_execution_vulnerability.router_ip_address,openwrt_download_link='https://openwrt.org/_detail/media/xiaomi/mi_router_4c.png?id=toh%3Axiaomi%3Axiaomi_mi_router_4c')
