@@ -117,7 +117,7 @@ download_repo_zip() {
     # Derive the ZIP download link if it's a GitHub repo
     if [[ "$REPO_URL" == *"github.com"* ]]; then
         # Normalize GitHub URL (handle both https://github.com/user/repo and .git URLs)
-        ZIP_URL=$(echo "$REPO_URL" | sed -E 's|\.git$||')/archive/refs/heads/main.zip
+        ZIP_URL=$(echo "$REPO_URL" | sed -E 's|\.git$||')/archive/refs/heads/master.zip
     else
         echo "❌ Unsupported repository host. Currently only supports GitHub."
         return 1
