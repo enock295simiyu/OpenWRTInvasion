@@ -89,7 +89,7 @@ class SshTelnetConnector(BaseConnector):
             logger.exception(e)
             raise e
         error = None
-        logger.debug(response)
+        logger.info(response)
         if isinstance(response, str) and 'bad command' in response:
             exit_status = 1
             error = response
