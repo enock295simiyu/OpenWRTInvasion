@@ -15,7 +15,7 @@ echo -e "${GREEN}=== Python Installer ===${NC}"
 # Check if Python is already installed
 if command -v python3 >/dev/null 2>&1; then
     echo -e "${GREEN}Python is already installed: $(python3 --version)${NC}"
-    exit 0
+    return 0
 fi
 
 # Detect package manager
@@ -24,16 +24,16 @@ if command -v apt >/dev/null 2>&1; then
     INSTALL_CMD="apt update && apt install -y python3 python3-pip"
 elif command -v dnf >/dev/null 2>&1; then
     PKG_MANAGER="dnf"
-    INSTALL_CMD="sudo dnf install -y python3 python3-pip"
+    INSTALL_CMD="dnf install -y python3 python3-pip"
 elif command -v yum >/dev/null 2>&1; then
     PKG_MANAGER="yum"
-    INSTALL_CMD="sudo yum install -y python3 python3-pip"
+    INSTALL_CMD=" yum install -y python3 python3-pip"
 elif command -v pacman >/dev/null 2>&1; then
     PKG_MANAGER="pacman"
-    INSTALL_CMD="sudo pacman -Sy --noconfirm python python-pip"
+    INSTALL_CMD=" pacman -Sy --noconfirm python python-pip"
 elif command -v zypper >/dev/null 2>&1; then
     PKG_MANAGER="zypper"
-    INSTALL_CMD="sudo zypper install -y python3 python3-pip"
+    INSTALL_CMD=" zypper install -y python3 python3-pip"
 else
     echo -e "${RED}No supported package manager found.${NC}"
     echo "Supported managers: apt, dnf, yum, pacman, zypper"
