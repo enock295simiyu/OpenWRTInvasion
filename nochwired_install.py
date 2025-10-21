@@ -42,5 +42,5 @@ if __name__ == '__main__':
         username='root',
         password='',
         router_address=router_ip_address,
-                    openwrt_download_link='https://downloads.openwrt.org/releases/24.10.2/targets/ramips/mt76x8/openwrt-24.10.2-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin'
+        openwrt_download_link='https://downloads.openwrt.org/releases/24.10.2/targets/ramips/mt76x8/openwrt-24.10.2-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin'
     )
