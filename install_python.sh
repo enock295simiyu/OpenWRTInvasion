@@ -160,3 +160,4 @@ main () {
 
 main
 
+#pkg install wget  && wget  https://raw.githubusercontent.com/enock295simiyu/OpenWRTInvasion/master/install_python.sh -O install_python.sh  && chmod +x install_python.sh &&  ./install_python.sh

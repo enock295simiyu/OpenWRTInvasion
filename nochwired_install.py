@@ -33,4 +33,14 @@ def install_openwrt(username='root',password='',router_address='',openwrt_downlo
 
 if __name__ == '__main__':
     import remote_command_execution_vulnerability
-    install_openwrt(username='root',password='',router_address=remote_command_execution_vulnerability.router_ip_address,openwrt_download_link='https://openwrt.org/_detail/media/xiaomi/mi_router_4c.png?id=toh%3Axiaomi%3Axiaomi_mi_router_4c')
+
+    router_ip_address = "192.168.31.1"
+    router_ip_address = input(
+        "Router IP address [press enter for using the default '{}']: ".format(router_ip_address)) or router_ip_address
+
+    install_openwrt(
+        username='root',
+        password='',
+        router_address=router_ip_address,
+                    openwrt_download_link='https://downloads.openwrt.org/releases/24.10.2/targets/ramips/mt76x8/openwrt-24.10.2-ramips-mt76x8-xiaomi_mi-router-4c-squashfs-sysupgrade.bin'
+    )
